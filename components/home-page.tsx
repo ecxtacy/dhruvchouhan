@@ -134,14 +134,14 @@ export function HomePage() {
         </section>
         <section className="space-y-4" id="contact">
           <h2 className="text-2xl font-bold">Contact</h2>
-          <p className="max-w-prose">Your contact information, including email and social media links.</p>
+          <p className="max-w-prose">Email: dc.dhruchouhan@gmail.com</p>
           <Button className="w-full sm:w-auto" variant="outline">
             Download Resume
           </Button>
         </section>
       </main>
       <footer className="flex items-center justify-center py-4 border-t">
-        <p className="text-sm text-gray-500">© 2024 Your Name</p>
+        <p className="text-sm text-gray-500">© 2024 Dhruv Chouhan</p>
       </footer>
     </div>
   )
