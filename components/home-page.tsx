@@ -10,7 +10,7 @@ import Image from "next/image"
 
 export function HomePage() {
   return (
-    <div className="dark:bg-gray-900 dark:text-gray-200 min-h-screen max-w-5xl mx-auto">
+    <div className="min-h-screen max-w-5xl mx-auto">
       <header className="flex justify-between items-center bg-gray-300 rounded-xl p-4">
         <div className="font-bold text-xl">Dhruv Chouhan</div>
         <nav className="space-x-4">
@@ -57,9 +57,9 @@ export function HomePage() {
           </ul>
           <h3 className="text-xl font-bold">Skills</h3>
           <div className="flex flex-wrap gap-2">
-            <span className="px-2 py-1 rounded bg-gray-200 dark:bg-gray-800">Your skill 1</span>
-            <span className="px-2 py-1 rounded bg-gray-200 dark:bg-gray-800">Your skill 2</span>
-            <span className="px-2 py-1 rounded bg-gray-200 dark:bg-gray-800">Your skill 3</span>
+            <span className="px-2 py-1 rounded bg-gray-200">Your skill 1</span>
+            <span className="px-2 py-1 rounded bg-gray-200">Your skill 2</span>
+            <span className="px-2 py-1 rounded bg-gray-200">Your skill 3</span>
           </div>
         </section>
         <section className="space-y-4" id="projects">
@@ -127,9 +127,9 @@ export function HomePage() {
         <section className="space-y-4" id="skills">
           <h2 className="text-2xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-2">
-            <span className="px-2 py-1 rounded bg-gray-200 dark:bg-gray-800">Your skill 1</span>
-            <span className="px-2 py-1 rounded bg-gray-200 dark:bg-gray-800">Your skill 2</span>
-            <span className="px-2 py-1 rounded bg-gray-200 dark:bg-gray-800">Your skill 3</span>
+            <span className="px-2 py-1 rounded bg-gray-200">Your skill 1</span>
+            <span className="px-2 py-1 rounded bg-gray-200">Your skill 2</span>
+            <span className="px-2 py-1 rounded bg-gray-200">Your skill 3</span>
           </div>
         </section>
         <section className="space-y-4" id="contact">
@@ -141,7 +141,7 @@ export function HomePage() {
         </section>
       </main>
       <footer className="flex items-center justify-center py-4 border-t">
-        <p className="text-sm text-gray-500 dark:text-gray-400">© 2024 Your Name</p>
+        <p className="text-sm text-gray-500">© 2024 Your Name</p>
       </footer>
     </div>
   )
