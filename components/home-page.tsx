@@ -7,31 +7,14 @@ import { Toggle } from "@/components/ui/toggle"
 import { CardTitle, CardHeader, CardContent, Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Navbar from "./navbar"
+import Skilltag from "./ui/skill-tag"
+import data, { about_me } from "@/content/data"
 
 export function HomePage() {
   return (
-    <div className="min-h-screen max-w-5xl mx-auto">
-      <header className="flex justify-between items-center bg-gray-300 rounded-xl p-4">
-        <div className="font-bold text-xl">Dhruv Chouhan</div>
-        <nav className="space-x-4">
-          <Link className="hover:underline" href="#">
-            About
-          </Link>
-          <Link className="hover:underline" href="#">
-            Projects
-          </Link>
-          <Link className="hover:underline" href="#">
-            Skills
-          </Link>
-          <Link className="hover:underline" href="#">
-            Contact
-          </Link>
-        </nav>
-        <div className="flex items-center space-x-2">
-          <span className="text-sm">Dark Mode</span>
-          <Toggle aria-label="Toggle Dark Mode" className="h-6 w-6" />
-        </div>
-      </header>
+    <div className="min-h-screen max-w-5xl mx-auto px-6 py-4">
+      <Navbar/>
       <main className="space-y-16 p-4">
         <section className="flex flex-col items-center space-y-4" id="hero">
           <Image
@@ -45,11 +28,11 @@ export function HomePage() {
             }}
             width={300}
           />
-          <h1 className="text-3xl font-bold">Hello, I&rsquo;m a Software Engineer</h1>
+          <h1 className="text-3xl font-bold">Namaskar, I&rsquo;m a Software Engineer</h1>
         </section>
         <section className="space-y-4" id="about">
           <h2 className="text-2xl font-bold">About Me</h2>
-          <p className="max-w-prose">I&rsquo;m a passionate software developer. I love to explore different technologies and trends. I like problem solving and contributing to open source projects.</p>
+          <p className="max-w-prose">{data.about_me}</p>
           <h3 className="text-xl font-bold">Education & Certifications</h3>
           <ul className="list-disc list-inside space-y-2">
             <li>Your education background</li>
@@ -57,9 +40,7 @@ export function HomePage() {
           </ul>
           <h3 className="text-xl font-bold">Skills</h3>
           <div className="flex flex-wrap gap-2">
-            <span className="px-2 py-1 rounded bg-gray-200">Your skill 1</span>
-            <span className="px-2 py-1 rounded bg-gray-200">Your skill 2</span>
-            <span className="px-2 py-1 rounded bg-gray-200">Your skill 3</span>
+            {data.skills.map((skill, index) => <Skilltag key={index}>{skill}</Skilltag>)}
           </div>
         </section>
         <section className="space-y-4" id="projects">
@@ -124,17 +105,9 @@ export function HomePage() {
             </Card>
           </div>
         </section>
-        <section className="space-y-4" id="skills">
-          <h2 className="text-2xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-2 py-1 rounded bg-gray-200">Your skill 1</span>
-            <span className="px-2 py-1 rounded bg-gray-200">Your skill 2</span>
-            <span className="px-2 py-1 rounded bg-gray-200">Your skill 3</span>
-          </div>
-        </section>
         <section className="space-y-4" id="contact">
           <h2 className="text-2xl font-bold">Contact</h2>
-          <p className="max-w-prose">Email: dc.dhruchouhan@gmail.com</p>
+          <p className="max-w-prose">{"Email: " + data.contact.email}</p>
           <Button className="w-full sm:w-auto" variant="outline">
             Download Resume
           </Button>
