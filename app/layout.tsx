@@ -7,8 +7,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='py-8 bg-cover bg-fixed bg-[url("/assets/light_bg.png")] dark:bg-[url("/assets/dark_bg.jpg")] dark:text-slate-50'>
-        <div>
+      <body className='bg-cover bg-fixed bg-[url("/assets/light_bg.png")] dark:bg-[url("/assets/dark_bg.jpg")] dark:text-slate-50'>
+        <div className='dark:bg-trans-black py-8 '>
           {children}
         </div>
       </body>

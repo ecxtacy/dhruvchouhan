@@ -10,6 +10,7 @@ import Image from "next/image"
 import Navbar from "./navbar"
 import Skilltag from "./ui/skill-tag"
 import data, { about_me } from "@/content/data"
+import Icon from "./ui/icon"
 
 export function HomePage() {
   return (
@@ -30,15 +31,26 @@ export function HomePage() {
           />
           <h1 className="text-3xl font-bold">Namaskar, I&rsquo;m a Software Engineer</h1>
         </section>
+        <section className="2xl:container mx-auto">
+            <div className="mx-auto">
+              <div className="max-w-xs py-3 px-8 rounded-lg shadow-lg border flex bg-gray-100 mx-auto justify-around">
+                <Icon iconName="github"/>
+                <Icon iconName="twitter"/>
+                <Icon iconName="gmail"/>
+                <Icon iconName="instagram"/>
+                <Icon iconName="linkedin"/>
+              </div>
+            </div>
+        </section>
         <section className="space-y-4" id="about">
-          <h2 className="text-2xl font-bold">About Me</h2>
+          <h2 className="text-2xl font-bold" >About Me</h2>
           <p className="max-w-prose">{data.about_me}</p>
-          <h3 className="text-xl font-bold">Education & Certifications</h3>
+          <h3 className="text-xl font-bold" id="skills">Education & Certifications</h3>
           <ul className="list-disc list-inside space-y-2">
             <li>Your education background</li>
             <li>Your relevant certifications</li>
           </ul>
-          <h3 className="text-xl font-bold">Skills</h3>
+          <h3 className="text-xl font-bold" >Skills</h3>
           <div className="flex flex-wrap gap-2">
             {data.skills.map((skill, index) => <Skilltag key={index}>{skill}</Skilltag>)}
           </div>
@@ -108,13 +120,13 @@ export function HomePage() {
         <section className="space-y-4" id="contact">
           <h2 className="text-2xl font-bold">Contact</h2>
           <p className="max-w-prose">{"Email: " + data.contact.email}</p>
-          <Button className="w-full sm:w-auto" variant="outline">
+          <Button className="w-full sm:w-auto text-black dark:text-slate-50 border dark:border-none" variant="resume">
             Download Resume
           </Button>
         </section>
       </main>
       <footer className="flex items-center justify-center py-4 border-t">
-        <p className="text-sm text-gray-500">© 2024 Dhruv Chouhan</p>
+        <p className="text-sm text-gray-500 dark:text-slate-50">© 2024 Dhruv Chouhan</p>
       </footer>
     </div>
   )

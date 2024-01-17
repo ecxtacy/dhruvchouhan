@@ -17,6 +17,7 @@ const config: Config = {
         trans: {
           blue: "rgba(11, 78, 172, 0.45)", 
           cyan: "rgba(175, 217, 231, 0.59)",
+          black: "rgba(0, 0, 0, 0.4)",
         }
       }
     },

@@ -9,17 +9,17 @@ const Navbar = (props: Props) => {
   return (
     <header className="flex justify-between items-center backdrop-blur-md bg-opacity-30 bg-gray-400 dark:text-slate-50 rounded-xl p-4 sticky top-4">
         <div className="font-bold text-xl">Dhruv Chouhan</div>
-        <nav className="space-x-4">
-          <Link className="hover:underline" href="#">
-            About
+        <nav className="hidden md:block space-x-4">
+          <Link className="hover:underline" href="/blogs">
+            Blog
           </Link>
-          <Link className="hover:underline" href="#">
+          <Link className="hover:underline" href="#projects">
             Projects
           </Link>
-          <Link className="hover:underline" href="#">
+          <Link className="hover:underline" href="#skills">
             Skills
           </Link>
-          <Link className="hover:underline" href="#">
+          <Link className="hover:underline" href="#contact">
             Contact
           </Link>
         </nav>
