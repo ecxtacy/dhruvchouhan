@@ -6,7 +6,7 @@ interface SkilltagProps {
 
 const Skilltag: React.FC<SkilltagProps> = ({ children }) => {
   return (
-    <span className='rounded-md px-3 py-1 bg-gray-300 dark:bg-trans-blue backdrop:blur-md bg-opacity-40'>{children}</span>
+    <span className='rounded-md px-3 cursor-pointer py-1 bg-green-300 dark:bg-trans-blue backdrop:blur-md bg-opacity-40'>{children}</span>
   )
 }
 

@@ -9,8 +9,9 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Navbar from "./navbar"
 import Skilltag from "./ui/skill-tag"
-import data, { about_me, education } from "@/content/data"
+import data, { about_me, education, project_detail } from "@/content/data"
 import Icon from "./ui/icon"
+import ProjectCard from "./card"
 
 export function HomePage() {
   return (
@@ -21,13 +22,13 @@ export function HomePage() {
           <Image
             alt="Your Photo"
             className="rounded-full my-6"
-            height={400}
+            height={600}
             src="/assets/me.jpeg"
             style={{
               aspectRatio: "200/200",
               objectFit: "cover",
             }}
-            width={300}
+            width={400}
           />
           <h1 className="text-3xl font-bold">Namaskar, I&rsquo;m a Software Engineer</h1>
         </section>
@@ -58,63 +59,7 @@ export function HomePage() {
         <section className="space-y-4" id="projects">
           <h2 className="text-2xl font-bold">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Project 1</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Image
-                  alt="Project 1"
-                  className="object-cover w-full h-60"
-                  height={300}
-                  src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "400/300",
-                    objectFit: "cover",
-                  }}
-                  width={400}
-                />
-                <p className="mt-4">Project 1 description</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Project 2</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Image
-                  alt="Project 2"
-                  className="object-cover w-full h-60"
-                  height={300}
-                  src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "400/300",
-                    objectFit: "cover",
-                  }}
-                  width={400}
-                />
-                <p className="mt-4">Project 2 description</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Project 3</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Image
-                  alt="Project 3"
-                  className="object-cover w-full h-60"
-                  height={300}
-                  src="/placeholder.svg"
-                  style={{
-                    aspectRatio: "400/300",
-                    objectFit: "cover",
-                  }}
-                  width={400}
-                />
-                <p className="mt-4">Project 3 description</p>
-              </CardContent>
-            </Card>
+            {project_detail.map((project_info) => <ProjectCard {...project_info}/>)}
           </div>
         </section>
         <section className="space-y-4" id="contact">
