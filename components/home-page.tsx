@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Navbar from "./navbar"
 import Skilltag from "./ui/skill-tag"
-import data, { about_me } from "@/content/data"
+import data, { about_me, education } from "@/content/data"
 import Icon from "./ui/icon"
 
 export function HomePage() {
@@ -45,10 +45,10 @@ export function HomePage() {
         <section className="space-y-4" id="about">
           <h2 className="text-2xl font-bold" >About Me</h2>
           <p className="max-w-prose">{data.about_me}</p>
-          <h3 className="text-xl font-bold" id="skills">Education & Certifications</h3>
+          <h3 className="text-xl font-bold" id="skills">Education</h3>
           <ul className="list-disc list-inside space-y-2">
-            <li>Your education background</li>
-            <li>Your relevant certifications</li>
+            <li>{education.college}</li>
+            <li>{education.degree}</li>
           </ul>
           <h3 className="text-xl font-bold" >Skills</h3>
           <div className="flex flex-wrap gap-2">

@@ -2,6 +2,11 @@ export const about_me = [
   "I’m a passionate software developer. I love to explore different technologies and trends. I like problem solving and contributing to open source projects.",
 ];
 
+export const education = {
+  college: "Indian Institute of Information Technology, Lucknow",
+  degree: "BTech. Information Technology"
+};
+
 export const skills = [
   "JavaScript",
   "TypeScript",
