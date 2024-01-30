@@ -10,7 +10,7 @@ interface CardProps {
 
 const ProjectCard: React.FC<CardProps> = ({ name, description, link }) => {
   return (
-    <Card>
+    <Card className='dark:bg-trans-blue dark:border-white dark:text-white border dark:border shadow-xl bg-gray-100'>
       <Link href={link}>
         <CardHeader>
           <CardTitle>{ name }</CardTitle>
