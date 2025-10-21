@@ -7,7 +7,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <header className="flex justify-between items-center backdrop-blur-md bg-opacity-30 bg-gray-400 dark:text-slate-50 rounded-xl p-4 sticky top-4">
+    <header className="flex justify-between items-center backdrop-blur-md bg-opacity-30 bg-gray-400 dark:text-slate-50 rounded-xl p-4 sticky top-4 z-30">
         <div className="font-bold text-xl">Dhruv Chouhan</div>
         <nav className="hidden md:block space-x-4">
           <Link className="hover:underline" href="/blogs">
