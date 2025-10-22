@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Navbar from "./navbar"
 import Skilltag from "./ui/skill-tag"
-import data, { about_me, educationData, experience, experiences, project_detail, projectsData } from "@/content/data"
+import data, { about_me, educationData, experience, experiences, project_detail, projectsData, social_links } from "@/content/data"
 import Icon from "./ui/icon"
 import ProjectCard from "./project-card"
 import ExperienceCard from "./experience-card"
@@ -30,11 +30,11 @@ export function HomePage() {
         <section className="2xl:container mx-auto">
             <div className="mx-auto">
               <div className="max-w-xs py-3 px-8 rounded-lg shadow-lg border flex bg-gray-100 mx-auto justify-around">
-                <Icon iconName="github"/>
-                <Icon iconName="twitter"/>
-                <Icon iconName="gmail"/>
-                <Icon iconName="instagram"/>
-                <Icon iconName="linkedin"/>
+                <Icon iconName="github" link={social_links.github}/>
+                <Icon iconName="twitter" link={social_links.twitter}/>
+                <Icon iconName="gmail" link={social_links.gmail}/>
+                <Icon iconName="instagram" link={social_links.instagram}/>
+                <Icon iconName="linkedin" link={social_links.linkedin}/>
               </div>
             </div>
         </section>

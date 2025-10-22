@@ -140,5 +140,13 @@ export const contact = {
   email: "dc.dhruvchouhan@gmail.com",
 };
 
+export const social_links = {
+  github: "https://github.com/ecxtacy",
+  twitter: "https://x.com/destroycompiler",
+  gmail: "mailto:dc.dhruvchouhan@gmail.com",
+  instagram: "https://www.instagram.com/dc.cpp",
+  linkedin: "https://www.linkedin.com/in/dhruv-chouhan-86a5711bb",
+};
+
 const data = { about_me, skills, contact };
 export default data;
